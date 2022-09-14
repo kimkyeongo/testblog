@@ -8,11 +8,12 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
+import HelloKey form "@/components/HelloKey.vue";
 export default {
   name: "HomeView",
   components: {
     HelloWorld,
+    HelloKey
   },
 };
 </script>
