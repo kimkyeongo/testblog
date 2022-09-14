@@ -1,0 +1,93 @@
+<template>
+  <div class="todo-body">
+    <input class="todo-input" placeholder="Add a Todo" v-model="tData" @keyup.enter="AddNewTodo">
+    <button class="todo-button" @click="AddNewTodo">ADD</button>
+    <ul>
+      <li v-for="(item,index) in tList">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      tData : "",
+      tList : [],
+    }
+  },
+  methods : {
+    AddNewTodo () {
+      this.tList.push(this.tData);
+      this.tData = '';
+      console.log(this.tData,this.tList)
+    }
+  }
+}
+
+</script>
+
+<style>
+ul{
+  list-style:none;
+  padding-left:0px;
+}
+li {
+  border: 2px solid #149fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+      90deg,
+      rgb(75, 167, 153) 0%,
+      rgb(102, 41, 133) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.todo-check {
+  text-decoration:line-through;
+}
+.todo-uncheck {
+
+}
+
+img{
+  width: 1.5vmin;
+}
+.todo-input {
+  padding: 2vmin;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 63vmin;
+  background: transparent;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+}
+
+.todo-button {
+  padding: 2vmin;
+  border: 2px solid #5d0cff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+      90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%
+  );
+  width: 12vmin;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+</style>
