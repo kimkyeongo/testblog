@@ -13,7 +13,7 @@
   border-bottom: solid #e2e3e3;
   display: flex;
   flex-direction: column;
-  background: #161a2b;
+  background: #db7f63;
   text-align: center;
   border-radius: 10px;
 }

@@ -18,7 +18,7 @@ export default {
   border-radius: 10px;
   height: 60vmin;
   width: 80vmin;
-  background-color: #fdfdfe;
+  background-color: rgba(59, 45, 234, 0.4);
 }
 
 </style>

@@ -4,7 +4,7 @@
     <button class="todo-button" @click="AddNewTodo">ADD</button>
     <ul>
       <li v-for="(item,index) in tList">
-        {{item}}
+        <a class="todo-check" @click="CheckTodo(index,$event)"/> {{item}} <a class="todo-trash" @click="DeleteTodo(index)"/>
       </li>
     </ul>
   </div>
@@ -22,7 +22,16 @@ export default {
       this.tList.push(this.tData);
       this.tData = '';
       console.log(this.tData,this.tList)
-    }
+    },
+    CheckTodo (idx,e) {
+      // this.$el;
+      console.log(e.target.className)
+      e.target.backgroundImage = "none;"
+    },
+    DeleteTodo (idx) {
+      // this.tList.filter((e)=>e.index !== idx );
+      this.tList.splice(idx, 1); ;
+    },
   }
 }
 
@@ -45,17 +54,29 @@ li {
       rgb(75, 167, 153) 0%,
       rgb(102, 41, 133) 100%
   );
-
+  font-size: 1rem;
   padding: 16px;
   border-radius: 5px;
-  width: 95%;
+  /*text-decoration:line-through;*/
 }
-
+.todo-trash {
+  background-image: url("@/assets/trash-can.png");
+  width: 1rem;
+  height: 1rem;
+  background-size : contain;
+}
 .todo-check {
-  text-decoration:line-through;
+  background-image: url("@/assets/checked.png");
+  width: 1rem;
+  height: 1rem;
+  background-size : contain;
 }
-.todo-uncheck {
 
+.todo-uncheck {
+  background-image: url("@/assets/unchecked.png");
+  width: 1rem;
+  height: 1rem;
+  background-size : contain;
 }
 
 img{
