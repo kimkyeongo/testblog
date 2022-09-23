@@ -1,20 +1,36 @@
 <template>
 	<div class="blog-detail">
-		<h1>{{ this.$route.params.id }}</h1>
+		<table>
+			<tr>
+				<th>Title</th>
+				<th>Body</th>
+			</tr>
+			<tr>
+				<td>{{ blog.title }}</td>
+				<td>{{ blog.body }}</td>
+			</tr>
+		</table>
 	</div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-	methods: {
-		init() {
-			console.log('init')
+	data() {
+		return {
+			blog: {}
 		}
 	},
-	created() {},
-	mounted() {
-		console.log('created')
-		console.log(this.$router)
+	methods: {},
+	created() {
+		axios
+			.get(
+				'https://jsonplaceholder.typicode.com/posts/' + this.$route.params.id
+			)
+			.then((response) => {
+				this.blog = response.data
+			})
 	}
 }
 </script>
