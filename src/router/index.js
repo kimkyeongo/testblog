@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import BlogDetailView from '@/components/blog/BlogDetailView.vue'
+import BlogDetailView from '@/components/business/blog/BlogDetail.vue'
 const routes = [
 	{
 		path: '/',
@@ -15,20 +15,24 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(
-				/* webpackChunkName: "about", webpackPrefetch : true */ '../views/AboutView.vue'
+				/* webpackChunkName: "about", webpackPrefetch : true */ '../components/business/about/AboutMain.vue'
 			)
 	},
 	{
 		path: '/todo',
 		name: 'todo',
 		component: () =>
-			import(/* webpackChunkName: "todo" */ '../views/TodoView.vue')
+			import(
+				/* webpackChunkName: "todo" */ '../components/business/todo/TodoMain.vue'
+			)
 	},
 	{
 		path: '/blog',
 		name: 'blog',
 		component: () =>
-			import(/* webpackChunkName: "blog" */ '../views/BlogListView.vue')
+			import(
+				/* webpackChunkName: "blog" */ '../components/business/blog/BlogList.vue'
+			)
 	},
 	{
 		path: '/blog/:id',

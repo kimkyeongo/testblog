@@ -1,6 +1,6 @@
 <script>
-import TodoHeader from '@/components/todo/TodoHeader'
-import TodoBody from '@/components/todo/TodoBody'
+import TodoHeader from '@/components/business/todo/TodoHeader'
+import TodoBody from '@/components/business/todo/TodoBody'
 export default {
 	components: {
 		TodoHeader,

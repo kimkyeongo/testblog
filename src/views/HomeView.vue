@@ -26,7 +26,7 @@ li {
 }
 </style>
 <script>
-import HelloWorld from '@/components/header/HelloWorld.vue'
+import HelloWorld from '@/components/common/header/HelloWorld.vue'
 
 export default {
 	components: {
