@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<!--    <img alt="Vue logo" src="@/assets/dolphin.jpg" />-->
+		<!--		<img alt="Vue logo" src="@/assets/dolphin.jpg" />-->
 		<HelloWorld msg="안녕하세요?" msg2="이 채널의 주인 KKO 입니다." />
 		<div v-html="phtml" />
 		<div v-html="phtml2" />
