@@ -1,15 +1,14 @@
 <template>
 	<div>
-		<h1>{{ msg }} {{ msg2 }}</h1>
+		<h1>{{ msg }}</h1>
 	</div>
+	<div id="world-map" style="width: 600px; height: 400px"></div>
 </template>
-
 <script>
 export default {
 	name: 'HelloWorld',
 	props: {
-		msg: String,
-		msg2: String
+		msg: String
 	}
 }
 </script>

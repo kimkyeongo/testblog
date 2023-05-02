@@ -1,14 +1,12 @@
 <template>
 	<div class="home">
 		<!--		<img alt="Vue logo" src="@/assets/dolphin.jpg" />-->
-		<HelloWorld msg="안녕하세요?" msg2="이 채널의 주인 KKO 입니다." />
-		<div v-html="phtml" />
-		<div v-html="phtml2" />
+		<HelloWorld msg="플로버" />
 	</div>
 </template>
 <style>
 .home {
-	background-image: url('@/assets/dolphin.jpg');
+	background-image: url('@/assets/Flover.png');
 	background-size: contain;
 	/*background-repeat : no-repeat;*/
 	height: 50rem;
