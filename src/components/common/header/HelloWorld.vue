@@ -2,7 +2,6 @@
 	<div>
 		<h1>{{ msg }}</h1>
 	</div>
-	<div id="world-map" style="width: 600px; height: 400px"></div>
 </template>
 <script>
 export default {

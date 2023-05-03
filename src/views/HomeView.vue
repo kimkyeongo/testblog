@@ -1,7 +1,8 @@
 <template>
 	<div class="home">
-		<!--		<img alt="Vue logo" src="@/assets/dolphin.jpg" />-->
-		<HelloWorld msg="플로버" />
+		<div class="map-wrapper">
+			<div id="map"></div>
+		</div>
 	</div>
 </template>
 <style>
@@ -24,26 +25,18 @@ li {
 }
 </style>
 <script>
-import HelloWorld from '@/components/common/header/HelloWorld.vue'
+window.jQuery = require('jquery')
+require('jvectormap')
 
 export default {
-	components: {
-		HelloWorld
-	},
-	data() {
-		return {
-			phtml:
-				'<p>this community leaning to study for web skills</p>' +
-				'<h2>and then next task describe</h2>',
-			phtml2:
-				'<ul>' +
-				'<li>1.vue</li>' +
-				'<li>2.es6</li>' +
-				'<li>3.typescript</li>' +
-				'<li>4.angular</li>' +
-				'</ul>'
+	data() {},
+	methods: {
+		initMap() {
+			$('#map').vectorMap({ map: 'asia_merc' })
 		}
 	},
-	methods: {}
+	mounted() {
+		this.initMap()
+	}
 }
 </script>
